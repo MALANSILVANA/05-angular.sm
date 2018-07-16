@@ -40,7 +40,8 @@
   <p>2 + 2 es igual a {{2+2}}</p>
 </div>
 -->
-<div class="container">
+<!--
+  <div class="container">
 
   <h1>Data Bindings</h1>
 
@@ -91,6 +92,41 @@
   <p>2 + 2 es igual a {{2+2}}</p>
 
 </div>
+-->
+<div class="row">
+  <div class="col-sm-12">
+    <app-titulo
+      [titulo]="titulo"
+    >
+    </app-titulo>
+  </div>
+</div>
 
+<div class="row">
+
+  <div class="col-sm-1"></div>
+
+  <div class="col-sm-2" *ngFor="let perfil of perfiles">
+    <app-perfil
+      [nombre]="perfil.nombrePerfil"
+      [urlImagen]="'/assets/imagenes/'+perfil.nombreImagen"
+    >
+
+    </app-perfil>
+  </div>
+
+  <div class="col-sm-1"></div>
+</div>
+
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4">
+    <app-boton
+      [nombreBoton]="nombreBoton"
+      (dioClick)="irAAdministrarPerfiles()"
+    ></app-boton>
+  </div>
+  <div class="col-sm-4"></div>
+</div>
 
 

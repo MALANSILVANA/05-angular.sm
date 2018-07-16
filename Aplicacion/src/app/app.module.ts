@@ -1,22 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
-import { TituloComponent } from './componentes/titulo/titulo.component';
-import { BotonComponent } from './componentes/boton/boton.component';
-import { PerfilComponent } from './componentes/perfil/perfil.component';
+import {AppComponent} from './app.component';
+import {TituloComponent} from './componentes/titulo/titulo.component';
+import {PerfilComponent} from './componentes/perfil/perfil.component';
+import {BotonComponent} from './componentes/boton/boton.component';
+
 
 @NgModule({
-  declarations: [
+  declarations: [ // Componentes
     AppComponent,
     TituloComponent,
-    BotonComponent,
-    PerfilComponent
+    PerfilComponent,
+    BotonComponent
   ],
-  imports: [
+  imports: [ // Modulos
     BrowserModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ // Servicios
+  ],
+  bootstrap: [ // Componente Inicial
+    AppComponent
+  ]
 })
 export class AppModule { }
